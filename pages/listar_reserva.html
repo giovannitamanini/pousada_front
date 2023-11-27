@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Reserva</title>
+    <link rel="shortcut icon" href="../imagens/header-footer/logo-pousada-quinta-do-ypua.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../css/listar_reserva.css">
+</head>
+
+<body>
+    <header class="container__header">
+        <a href="../index.html">
+            <img class="header__logo" src="../imagens/header-footer/logo-pousada-quinta-do-ypua.webp"
+                alt="Pousada Quinta do Ypuã" />
+        </a>
+
+        <nav>
+            <menu>
+                <li><a href="../index.html">Início </a></li>
+                <li><a href="acomodacoes.html">Acomodações</a></li>
+                <li><a href="cadastro_reserva.html">Reservas</a></li>
+                <li><a href="estadia.html">Estadias</a></li>
+                <li><a class="btn__cadastro__reserva" href="cadastro_hospede.html">Cadastro de hóspedes</a></li>
+            </menu>
+        </nav>
+    </header>
+    <section class="container__reservas">
+        <h1>Reservas</h1>
+        <button class="btn__listar__reserva" onclick="buscarTodasReservas(event)">Buscar todas as reservas</button>
+        <button class="btn__listar__reserva" onclick="buscarReservasEmEspera(event)">Buscar reservas em espera</button><br><br>
+        <div id="reservaResultados"></div>
+    </section>
+
+    <section class="container__iniciar__estadia">
+        <input class="input__campo__reserva" type="number" id="idReserva" placeholder="Digite o ID da reserva">
+        <input class="btn__listar__reserva" type="submit" value="Iniciar estadia" onclick="iniciarEstadiaPorId(event)">
+
+    </section>
+
+    <div class="divider">
+        <hr />
+      </div>
+
+    <footer>
+        <div>
+            <address class="container__footer">
+                <p>Estrada Ipua, nº 6</p>
+                <p>Laguna - SC | 88790-000</p>
+                <p>
+                    <strong> (48) 99940-9732 |
+                        <a class="footer__email"
+                            href="mailto:pousadaquintadoypua@gmail.com">pousadaquintadoypua@gmail.com</a>
+                </p></strong>
+
+            </address>
+
+            <div class="footer__social__media">
+                <a href="https://www.facebook.com/pousadaquintadoypua" target="_blank">
+                    <img class="footer__img" src="../imagens/header-footer/facebook.webp" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/pousadaquintadoypua/" target="_blank">
+                    <img class="footer__img" src="../imagens/header-footer/instagram.webp" alt="Instagram" />
+                </a>
+                <div class="footer__pipe"></div>
+                <a class="btn__whatsapp" href="https://wa.me/5548999409732" target="_blank">Fale conosco via
+                    WhatsApp</a>
+            </div>
+            <p class="footer__credits">
+                © Pousada Quinta do Ypuã<br />
+                Todos os direitos reservados
+            </p>
+        </div>
+
+        <article class="footer__promotions">
+            <p>Cadastre-se para receber promoções</p>
+            <form class="footer__form" method="post" onsubmit="event.preventDefault(); cadastrar();">
+                <label for="email"></label>
+                <input class="footer__input__email" type="email" id="email" name="email" placeholder="Insira o seu email aqui*
+          " required>
+
+                <input class="footer__btn__email" type="submit" value="Cadastrar">
+            </form>
+        </article>
+    </footer>
+    <script src="../js/reservas.js"></script>
+</body>
+
+</html>

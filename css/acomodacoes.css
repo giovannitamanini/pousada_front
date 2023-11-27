@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-principal: #FFFFFF;
+    --cor-secundaria: #7E2726;
+    --cor-terciaria: #000000;
+    --cor-whatsapp: #25d366;
+    --cor-whatsapp-hover: #1DB578;
+
+    --fonte-opensans: 'Open Sans', sans-serif;
+    --fonte-din: 'Roboto', sans-serif;
+    --fonte-avenir: 'Montserrat', sans-serif;
+}
+
+.container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    padding: 2% 20%;
+}
+
+.header__logo {
+    width: 80px;
+    height: 80px;
+}
+
+menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+}
+
+menu li a {
+    color: var(--cor-terciaria);
+    font-size: 0.93em;
+    font-family: var(--fonte-opensans);
+}
+
+menu li a:hover {
+    color: #DABC86;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn__cadastro__reserva {
+    border: 1px solid var(--cor-terciaria);
+    padding: 8px 30px;
+}
+
+.btn__cadastro__reserva:hover {
+    color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
+}
+
+.container__acomodacoes {
+    display: flex;
+    padding: 3% 20%;
+    gap: 20px;
+}
+
+.acomodacoes__title h1 {
+    display: flex;
+    align-items: flex-end;
+    height: 352px;
+    width: 210px;
+    padding: 14px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    font-family: var(--fonte-din);
+    font-size: 1.87em;
+}
+
+.acomodacoes__img__title {
+    max-width: 72%;
+}
+
+.acomodacoes__img {
+    background-image: url('../imagens/inicio/principal.webp');
+}
+
+.container__tipos__acomodacoes {
+    padding: 1% 22%;
+}
+
+.container__tipos__acomodacoes {
+    font-family: var(--fonte-avenir);
+}
+
+.divider__tipos__acomodacoes {
+    padding: 2% 0;
+}
+
+.divider {
+    padding: 3% 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.acomodacoes__info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.acomodacoes__info__detalhes {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acomodacoes__info__preco {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.acomodacoes__info__preco p {
+    font-size: 0.62em;
+}
+
+.acomodacoes__info__preco div {
+    font-size: 2.18em;
+}
+
+.divider > hr {
+    width: 1208px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+
+.container__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 8% 0;
+}
+
+.footer__email {
+    color:#000000;
+}
+
+.footer__social__media{
+    display: flex;
+    gap: 7px;
+    
+}
+
+.btn__whatsapp {
+    padding: 8px 5px;
+    background-color: var(--cor-whatsapp);
+    color: var(--cor-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.87em;
+}
+
+.btn__whatsapp:hover {
+    background-color:var(--cor-whatsapp-hover);
+}
+
+.footer__pipe {
+    height: 30px;
+    width: 1px;
+    background-color: #000000;
+}
+
+.footer__img {
+    width: 23px;
+    height: 23px;
+}
+
+.footer__credits {
+    padding: 20% 0;
+}
+
+.footer__promotions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer__promotions p {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-din);
+    font-size: 1em;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer__input__email {
+    width: 280px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.footer__btn__email {
+    width: 303px;
+    height: 35px;
+
+    color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-din);
+    font-size: 0.87em;
+}
+
+.footer__btn__email:hover {
+    background-color: var(--cor-terciaria);
+}
+
+@media(max-width: 1200px) {
+    .container__header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .container__header a {
+        padding: 0 8%;
+    }
+
+    nav {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+                
+    menu {
+        flex-direction: column;
+            align-items: center;
+    }    
+    
+    menu li {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .footer__form {
+        gap: 10px;
+    }
+
+    .footer__block__address {
+        padding: 0 28%;
+    }
+}
